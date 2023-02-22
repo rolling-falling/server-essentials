@@ -1,0 +1,13 @@
+---
+# tasks file for nginx-ssl
+- name: Install NGINX
+  ansible.builtin.apt:
+    package: nginx
+    state: present
+  become: true
+
+- name: Install certbot
+  ansible.builtin.apt:
+    package: certbot
+    state: present
+  become: true
